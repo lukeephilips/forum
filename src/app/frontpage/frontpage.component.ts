@@ -16,6 +16,9 @@ export class FrontpageComponent implements OnInit {
   goToDetailPage(clickedPost: Post) {
     this.router.navigate(['posts', clickedPost.id]);
   }
+  goToCategoryPage(clickedPost: Post) {
+    this.router.navigate(['categories', clickedPost.category]);
+  }
 
   ngOnInit() {
     this.posts = this.postService.getPosts();

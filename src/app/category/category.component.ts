@@ -4,16 +4,17 @@ import { Location } from '@angular/common';
 import { Post } from '../post.model';
 import { PostService } from '../post.service'
 
-
 @Component({
-  selector: 'app-post-detail',
-  templateUrl: './post-detail.component.html',
-  styleUrls: ['./post-detail.component.css'],
+  selector: 'app-category',
+  templateUrl: './category.component.html',
+  styleUrls: ['./category.component.css'],
   providers: [PostService]
+
 })
-export class PostDetailComponent implements OnInit {
-  postId: number;
-  postToDisplay: Post;
+export class CategoryComponent implements OnInit {
+  cat: string;
+  postsToDisplay: Post[] =[];
+
 
   constructor(
     private route: ActivatedRoute,
@@ -23,9 +24,9 @@ export class PostDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParametersArray) => {
-      this.postId = parseInt(urlParametersArray['id']);
+      this.cat = urlParametersArray['category'];
     });
-    this.postToDisplay = this.postService.getPostById(this.postId);
+    this.postsToDisplay = this.postService.getPostByCategory(this.cat);
   }
 
 }

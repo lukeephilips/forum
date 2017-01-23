@@ -1,6 +1,6 @@
-<div class="well" *ngFor="let post of posts" (click)="goToDetailPage(post)">
-  <h4>{{post.title}}</h4>
-  <p>Category: {{post.category}}</p>
+<div class="well" *ngFor="let post of posts" >
+  <h4 (click)="goToDetailPage(post)">{{post.title}}</h4>
+  <p (click)="goToCategoryPage(post)">Category: {{post.category}}</p>
 </div>
 <div class="row">
   <div class="col-sm-3 people panel-default">

@@ -14,6 +14,7 @@ import { PlacesComponent } from './places/places.component';
 import { MusicComponent } from './music/music.component';
 import { TvComponent } from './tv/tv.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
     PlacesComponent,
     MusicComponent,
     TvComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
