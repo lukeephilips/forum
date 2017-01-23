@@ -9,23 +9,17 @@ import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
-import { PeopleComponent } from './people/people.component';
-import { PlacesComponent } from './places/places.component';
-import { MusicComponent } from './music/music.component';
-import { TvComponent } from './tv/tv.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { CategoryComponent } from './category/category.component';
+import { NewPostComponent } from './new-post/new-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FrontpageComponent,
-    PeopleComponent,
-    PlacesComponent,
-    MusicComponent,
-    TvComponent,
     PostDetailComponent,
-    CategoryComponent
+    CategoryComponent,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,

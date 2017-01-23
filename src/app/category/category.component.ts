@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Post } from '../post.model';
+import { NewPostComponent } from '../new-post/new-post.component'
 import { PostService } from '../post.service'
+
 
 @Component({
   selector: 'app-category',
