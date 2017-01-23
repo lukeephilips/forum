@@ -1,10 +1,10 @@
-<div class="col-sm-3 people panel-default">
+<div class="panel-default">
   <div class="panel-heading">
-    <h2>{{postToDisplay.title}}</h2>
+    <h2>{{post.title}}</h2>
   </div>
   <div class="panel panel-body">
-    <h4><a routerLink='../../{{postToDisplay.category}}'>Category: {{postToDisplay.category}}</a></h4>
-    <p>{{postToDisplay.date}}</p>
-    <p>{{postToDisplay.content}}</p>
+    <h4 (click)="goToCategoryPage(post)"><a>Category: {{post.category}}</a></h4>
+    <p>{{post.date}}</p>
+    <p>{{post.content}}</p>
   </div>
 </div>

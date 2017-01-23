@@ -1,13 +1,10 @@
-<h1>category</h1>
-<div class="people panel-default">
+<h1>{{cat}}</h1>
+<div class="people panel-default" *ngFor='let post of postsToDisplay'>
   <div class="panel-heading">
-    <h2>{{cat}}</h2>
+    <p>{{post.title}}</p>
   </div>
-  <div class="panel panel-body">
-    <div class="well" *ngFor='let post of postsToDisplay'>
-      <p>{{post.title}}</p>
-      <p>{{post.date}}</p>
-      <p>{{post.content}}</p>
-    </div>
+  <div class="panel panel-body" >
+    <p>{{post.date}}</p>
+    <p>{{post.content}}</p>
   </div>
 </div>
