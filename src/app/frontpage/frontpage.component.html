@@ -1,14 +1,17 @@
-<h1>All the news for you to hate on</h1>
+<div class="jumbotron center-block">
+  <h1 >HaterNews</h1>
+  <img class="img img-rounded" id="bigPic" src="http://vignette1.wikia.nocookie.net/uncyclopedia/images/2/2e/Chappelle-player-haters-ball.jpg/revision/latest?cb=20120218071931" />
+  <h3>The news source for true haters</h3>
+</div>
 <div class="panel-default" *ngFor="let post of posts" >
-  <div class="panel-heading">
-    <h3 (click)="goToDetailPage(post)"><a>{{post.title}}</a></h3>
-  </div>
-  <div class="panel-body">
-    <h4 (click)="goToCategoryPage(post)">Category: <a>{{post.category}}</a></h4>
-  </div>
+  <h3 (click)="goToDetailPage(post)"><a>{{post.title}}</a></h3>
+  <h4 (click)="goToCategoryPage(post)">Category: <a>{{post.category}}</a></h4>
+  <h5> Score: {{post.score}}</h5>
+  <hr>
+
 </div>
 
-<div class="row">
+<!-- <div class="row">
   <div class="col-sm-3 people panel-default">
     <div class="panel-heading">
       <h3><a routerLink="people">People</a></h3>
@@ -44,4 +47,4 @@
 
     </div>
   </div>
-</div>
+</div> -->

@@ -1,8 +1,11 @@
 export class Post {
   constructor(public title: string, public category: string, public content: string, public date: Date, public image: string, public id: number){}
-  public rating: number = 0;
-  public idCounter: number = 5;
-  incrementId() {
-    this.idCounter += 1;
+  public score: number = 0;
+
+  incrementScore() {
+    this.score += 1;
+  }
+  decrementScore() {
+    this.score -= 1;
   }
 }

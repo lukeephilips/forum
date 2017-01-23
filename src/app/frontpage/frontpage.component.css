@@ -1,0 +1,9 @@
+#bigPic {
+  width: 400px;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

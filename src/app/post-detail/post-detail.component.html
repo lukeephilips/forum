@@ -7,5 +7,10 @@
     <p>{{post.date}}</p>
     <p>{{post.content}}</p>
     <img src={{post.image}} alt={{post.title}} />
+
+  </div>
+  <div class="panel-footer">
+    <h1><a (click)="downVote()" class="glyphicon glyphicon-thumbs-down text-danger clickable" aria-hidden="true"></a>
+      <a (click)="upVote()" class="glyphicon glyphicon-thumbs-up text-success clickable" aria-hidden="true"></a> Score: {{post.score}}</h1>
   </div>
 </div>

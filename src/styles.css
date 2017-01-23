@@ -7,3 +7,9 @@
 a:hover{
   cursor: pointer;
 }
+.up {
+  color: darkgreen;
+}
+.down {
+  color: darkred;
+}

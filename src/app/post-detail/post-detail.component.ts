@@ -31,5 +31,11 @@ export class PostDetailComponent implements OnInit {
   goToCategoryPage(clickedPost: Post) {
     this.router.navigate(['categories', clickedPost.category]);
   }
+  upVote() {
+    this.post.incrementScore()
+  }
+  downVote() {
+    this.post.decrementScore()
+  }
 
 }
