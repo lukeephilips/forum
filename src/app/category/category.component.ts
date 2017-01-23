@@ -4,6 +4,8 @@ import { Location } from '@angular/common';
 import { Post } from '../post.model';
 import { NewPostComponent } from '../new-post/new-post.component'
 import { PostService } from '../post.service'
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -15,10 +17,11 @@ import { PostService } from '../post.service'
 })
 export class CategoryComponent implements OnInit {
   cat: string;
-  postsToDisplay: Post[] =[];
+  posts: Post[] =[];
 
 
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private location: Location,
     private postService: PostService
@@ -28,7 +31,10 @@ export class CategoryComponent implements OnInit {
     this.route.params.forEach((urlParametersArray) => {
       this.cat = urlParametersArray['category'];
     });
-    this.postsToDisplay = this.postService.getPostByCategory(this.cat);
+    this.posts = this.postService.getPostByCategory(this.cat);
+  }
+  goToDetailPage(clickedPost: Post) {
+    this.router.navigate(['posts', clickedPost.id]);
   }
 
 }

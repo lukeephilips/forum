@@ -1,3 +1,31 @@
-<p>
-  new-post works!
-</p>
+<div class="row">
+  <div class="col-sm-9">
+    <h2>Add a Post</h2>
+
+    <div class="input-group">
+      <span class="input-group-addon">Title</span>
+      <input #title class="form-control">
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon" for="category">Category:</span>
+      <select #category  class="form-control" id="category">
+        <!-- <option *ngFor="let category of Categories" [value]=category>{{category}}</option> -->
+        <option [value]="people">People</option>
+        <option [value]="places">Places</option>
+        <option [value]="music">Music</option>
+        <option [value]="tv">TV</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon">Image URL</span>
+      <input #image class="form-control">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon">Content</span>
+      <textarea #content class="form-control"></textarea>
+    </div>
+    <button (click)='newPost(title.value, category.value, image.value)' class="btn btn-danger">Post!</button>
+  </div>
+</div>
