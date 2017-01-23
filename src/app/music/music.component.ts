@@ -12,12 +12,15 @@ import { POSTS } from '../posts'
 
 })
 export class MusicComponent implements OnInit {
+  cat = 'music'
+  postsToDisplay: Post[] =[];
 
   constructor(
-    private albumService: PostService
+    private postService: PostService
   ) { }
 
   ngOnInit() {
+    this.postsToDisplay = this.postService.getPostByCategory(this.cat);
+    ;
   }
-
 }

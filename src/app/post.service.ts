@@ -17,5 +17,14 @@ export class PostService {
       }
     }
   }
+  getPostByCategory(cat: string){
+    var output: Post[] = [];
+    for (var i = 0; i <= POSTS.length - 1; i++) {
+      if (POSTS[i].category === cat) {
+        output.push(POSTS[i]);
+      }
+    }
+    return output;
+  }
 
 }
