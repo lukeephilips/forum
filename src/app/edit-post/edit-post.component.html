@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-sm-9">
+    <h2>Edit Post</h2>
+
+    <div class="input-group">
+      <span class="input-group-addon">Title</span>
+      <input [(ngModel)]="post.title" class="form-control">
+    </div>
+
+    <!-- <div class="input-group">
+      <span class="input-group-addon" for="category">Category:</span>
+      <select #category  class="form-control" id="category">
+        <option *ngFor="let category of Categories" [value]=category>{{category}}</option>
+        <option value="people">People</option>
+        <option value="places">Places</option>
+        <option value="music">Music</option>
+        <option value="tv">TV</option>
+      </select>
+    </div> -->
+
+    <div class="input-group">
+      <span class="input-group-addon">Image URL</span>
+      <input [(ngModel)]="post.image" class="form-control">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon">Content</span>
+      <textarea [(ngModel)]="post.content" class="form-control"></textarea>
+    </div>
+    <button (click)='closeEdit()' class="btn btn-danger">Done</button>
+  </div>
+</div>

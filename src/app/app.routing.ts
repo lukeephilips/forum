@@ -4,6 +4,8 @@ import { FrontpageComponent } from './frontpage/frontpage.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { CategoryComponent } from './category/category.component';
 import { NewPostComponent } from './new-post/new-post.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
+
 
 const appRoutes: Routes = [
   {
@@ -21,6 +23,10 @@ const appRoutes: Routes = [
   {
     path: 'new-post',
     component: NewPostComponent
+  },
+  {
+    path: 'edit-post/:id',
+    component: EditPostComponent
   }
 ];
 

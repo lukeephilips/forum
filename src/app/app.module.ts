@@ -12,6 +12,7 @@ import { FrontpageComponent } from './frontpage/frontpage.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { CategoryComponent } from './category/category.component';
 import { NewPostComponent } from './new-post/new-post.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NewPostComponent } from './new-post/new-post.component';
     FrontpageComponent,
     PostDetailComponent,
     CategoryComponent,
-    NewPostComponent
+    NewPostComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,

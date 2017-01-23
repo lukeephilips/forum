@@ -4,14 +4,14 @@ import { Location } from '@angular/common';
 import { Post } from '../post.model';
 import { PostService } from '../post.service'
 
-
 @Component({
-  selector: 'app-post-detail',
-  templateUrl: './post-detail.component.html',
-  styleUrls: ['./post-detail.component.css'],
+  selector: 'app-edit-post',
+  templateUrl: './edit-post.component.html',
+  styleUrls: ['./edit-post.component.css'],
   providers: [PostService]
+
 })
-export class PostDetailComponent implements OnInit {
+export class EditPostComponent implements OnInit {
   postId: number;
   post: Post;
 
@@ -28,17 +28,9 @@ export class PostDetailComponent implements OnInit {
     });
     this.post = this.postService.getPostById(this.postId);
   }
-  editPost(clickedPost: Post) {
-    this.router.navigate(['edit-post', clickedPost.id]);
-  }
-  goToCategoryPage(clickedPost: Post) {
-    this.router.navigate(['categories', clickedPost.category]);
-  }
-  upVote() {
-    this.post.incrementScore()
-  }
-  downVote() {
-    this.post.decrementScore()
+  closeEdit() {
+    this.router.navigate(['posts', this.post.id]);
+
   }
 
 }

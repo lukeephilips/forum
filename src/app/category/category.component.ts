@@ -28,6 +28,7 @@ export class CategoryComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log('hey')
     this.route.params.forEach((urlParametersArray) => {
       this.cat = urlParametersArray['category'];
     });
