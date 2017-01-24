@@ -7,9 +7,17 @@
 a:hover{
   cursor: pointer;
 }
-.up {
-  color: darkgreen;
+
+.input-group{
+    width: 100%;
 }
-.down {
-  color: darkred;
+.input-group-addon {
+    width: 25%;
+    text-align: left;
+}
+.form-control {
+    width: 55%;
+}
+textarea {
+  height: 150px;
 }

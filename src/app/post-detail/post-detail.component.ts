@@ -14,6 +14,7 @@ import { PostService } from '../post.service'
 export class PostDetailComponent implements OnInit {
   postId: number;
   post: Post;
+  posts: Post[]
 
   constructor(
     private router: Router,
@@ -30,6 +31,14 @@ export class PostDetailComponent implements OnInit {
   }
   editPost(clickedPost: Post) {
     this.router.navigate(['edit-post', clickedPost.id]);
+  }
+  deletePost(clickedPost: Post) {
+    let posts: Post[] = this.postService.getPosts();
+    let thisPost = posts.indexOf(this.post);
+    if (window.confirm('are you sure?')) {
+      posts.splice(thisPost, 1);
+      this.router.navigate(['']);
+    }
   }
   goToCategoryPage(clickedPost: Post) {
     this.router.navigate(['categories', clickedPost.category]);

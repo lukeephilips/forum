@@ -1,22 +1,19 @@
 <div class="row">
   <div class="col-sm-9">
     <h2>Edit Post</h2>
-
     <div class="input-group">
       <span class="input-group-addon">Title</span>
       <input [(ngModel)]="post.title" class="form-control">
     </div>
-
-    <!-- <div class="input-group">
+    <div class="input-group">
       <span class="input-group-addon" for="category">Category:</span>
-      <select #category  class="form-control" id="category">
-        <option *ngFor="let category of Categories" [value]=category>{{category}}</option>
+      <select [(ngModel)]="post.category" class="form-control" id="category">
         <option value="people">People</option>
         <option value="places">Places</option>
         <option value="music">Music</option>
         <option value="tv">TV</option>
       </select>
-    </div> -->
+    </div>
 
     <div class="input-group">
       <span class="input-group-addon">Image URL</span>
@@ -29,3 +26,4 @@
     <button (click)='closeEdit()' class="btn btn-danger">Done</button>
   </div>
 </div>
+<img src={{post.image}} />
